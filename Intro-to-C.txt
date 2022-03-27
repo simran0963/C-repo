@@ -1,0 +1,306 @@
+													C (Dennis Ritchie, 1972)
+
+Why C language is so important?
+	1. Oracle(database related software) is written in C.
+	2. core libraries of android are written in C.
+	3. MySQL(database management software) is written in C.
+	4. Almost all device drivers are wriiten in C.
+	5. Major part of web browser is also written in C.
+	6. Unix OS is developed in C.
+	7. C is the world's most popular programming language.
+	8. C is important to build programming skills.
+	9. C covers basic features of all programming language.
+	10. Campus recruitment process.
+	11. C is the most popular language for hardware dependent programming.
+	12. C is a case sensitive language.
+
+
+HISTORY OF C LANGUAGE
+	Martin Richards: Developer of BCPL(Basic Combined Programming Language)
+	Ken Thompson: Developer of B language(1969).
+				  Developer of Unix OS.
+				  Developed first master level chess called Belle(1980).
+				  Improved BCPL
+	Dennis Ritchie: Developer of C Language, 1972.
+					At AT & T's Bell LABs, USA.  
+					Co-developer of UNIX operating system.
+
+
+WHAT IS A COMPUTER?
+A computer is an electronic device which takes input, processes it and returns an output.
+For a device to be a computer, it strictly has to be electronic(low volt. devices) and not electrical(works over more voltage and current).
+
+WHAT IS  AND 1?
+	1. A computer has nothing like 0 and 1. It has no physical significance.
+	2. Every information can be encoded as a sequence of 0 and 1 for the computer to understand.
+
+How 0 and 1 gets stored in memory?
+	1. The read/write head in a hard drive stores information inside the magnetic material and forms north and south pole(0, 1 is only for us, the computer 
+	   has only the direction of north and south poles).
+		1. When north pole is facing downwards, it is a 1
+		2. and if the north pole is facing upwards, it gives a 0.
+	2. RAM has capacitors, and capacitors have charge.
+		1. If C has charge, we call it 1
+		2. else 0.
+		For storing a 0 or 1, we need a capacitor.
+	3. Processor also has a memory unit which has small resistors, that contains data, resistors are made from flip flops(a circuit that stores 1 bit of information)
+	   So if the computer has a current flow, only then can the information be stored. So processor also has a volatile memory.
+	Hard disk can store the magnetic information permanently, whether it has current or not but RAM is a volatile memory
+
+WHAT IS A HARDWARE?
+	1. Hardware is a comprehensive term for all of the physical parts of a computer, as distinguished from the data it contains or operates on, and the software that
+	   provides instructions for the hardware to accomplish tasks.
+	2. Hardware is anything which is tangible(touchable substance)
+
+WHAT IS A FILE?
+	1. File is a data bundle.
+		-> These bundles can have the same set of 0 and 1's but its the file's extention that differentiates what the data stored is like:
+			If in a mp3 file a set of 0 and 1 is the signal of sound, the jpg file will have the information about the coding of an image in pixels, in a txt file it
+			has to represent a character or symbol but in a exe file only special data can be stored, it has the instructions for the functioning of the computer.
+		NOTE*: exe FILE IS A SOFTWARE.
+
+WHAT IS A SOFTWARE?
+	1. Application software:
+		made for the user like MS office, windows media player, calculator.
+		only user interacts with this software, has nothing to do with the hardware.
+	2. System software:
+		used by the machine like device drivers(program to run a device) or programs related to graphics
+
+WHAT IS A PROGRAM?
+	1. Set od instructions,
+	2. Active state of a program is called process.
+
+OPERATING SYSTEM
+	1. It is a system software(interacts with the hardware)
+	2. Example are DOS, windows xp, windows vista, windows 7, windows 8, Solaris, Macintosh, Linux, Linux, ubuntu etc.
+	3. It provides interface between user and machine.
+	4. Acts as hthe manager of the computer system.
+	5. It does process management, memory managemant, file management.
+
+EXECUTION OF A PROGRAM
+	Our computer has three important hardwares:
+	1. Processor:
+		-> MU: Memory unit(set of registers)
+		-> CU: Control Unit(Circuit that reads instruction and decodes it)
+		-> ALU: Arithemetic and Logical unit(resposible for all arithemetic and logical calculations/ performs all kinds of calculations)
+	2. RAM:
+	3. Hard Disk:
+
+	Whenever a software is installed and we open it, firstly the set of instructions gets stored in the hard disk, then a copy of the file gets stored in the RAM, once all
+	the instructions or memory is allocated in the RAM(which OS is responsible for), the program starts executing. The process starts with the first 16 bits(first instruction) 
+	finding its way to the processor, where it enters the MU(contains memory unit, many memory device or registers) and the instruction register stores the instruction, then 
+	the control unit reads and decodes the instruction and sends signal to the ALU about what kind of calculations it has to perform and then ALU executes the first instruction.
+	And taking turns all the instructions execute one by one and our program ends.
+
+SOFTWARE DEVELOPMENT IN C
+	Instead of learning the binary language which can only be read by a DOS OS we rather learn a simple language C:
+		This kind of file is known as a source file and is named with an extention .c
+		Since .c file is not a software so it has to be turned into a .exe file(.exe file is OS dependent but C is hardware independent)
+
+	Preprocessor software handles every hash file. It also mixes the header files with our content to make a new file, where hash statements are replaced by other statements.
+	Then the compiler software translates this program to an object file(ext, is ,obj), according to the OS.
+	The linker then links the object file and the library file(since OS does not know the meaning of everything thats typed within our program.) and makes a .exe file.
+	All this effort is to make our .c file into a software i.e., the .exe file.
+
+NOTE*: Comments in c are written within /* and */  
+LEC 2
+_____________________________________________________________________________________________________________________________________________________________________________
+
+Basic letters of C language:
+	A to Z       a to z         0 to 9           Symbols: ({:"/\?><+=*&%!
+
+Identifiers:
+
+	1. Constant: a value that never changes/ any information(data = information = constant)
+		Types of constants:
+			1. Primary Constant: 
+			  -> integer[-55, 25, 0], 
+			  -> real[2.14, -0.05, 2.0] and 
+			  -> character['a', '+', ' ', '2']
+			2. Secondary Constant: 
+			  -> array, string, pointer, union, structure and enumerator)
+
+			  Program consumes memory in RAM, that memory is used to store instruction and data. To save the data we have to define beforehand how much memory needs to be consumed
+			  by our program in C lang. 
+	2. Variables: Variables are the names of the memory locations where we store data.
+		Rules for naming the variables:
+		  1. Variable can only be a combination of alphabets, numbers and underscoores.
+		  2. A variable name should never start with a number
+	3. Keywords
+		1. Smallest identifying unit in a program.
+    	2. Predefined words/ reserved words.
+   		3. There are 32 keywords in C Language(acc. to 16 bit architecture).
+
+LEC 3
+_____________________________________________________________________________________________________________________________________________________________________________
+
+Instruction:
+	1. Data type Declaration instruction 
+	2. Input/ output instruction
+	3. Arithmetic instruction
+	4. Control instruction
+
+	WHAT ARE INSTRUCTIONS?
+		A statement or sentence in programming language is called an instruction.
+		They are commands for the computer
+
+	What are datatypes?(5/32 keywords)
+		1. int
+		2. char
+		3. float
+		4. double
+		5. void
+		Since they are keywords as well as datatypes, they are called "PRIMITIVE DATA TYPES"
+
+	DECLARATION STATEMENTS: at first the datatype is declared, and only one kind of datatype is declared. 
+		int a,b=5;
+		float k;
+		char ch,m;
+		double d1;
+	In C all statements except the declaration statements are known as action statements and declaration are always written ahead of the action statements.
+
+LEC 4 
+_____________________________________________________________________________________________________________________________________________________________________________
+
+Standard input/output device:
+	-> Keyboard is standard input device
+	-> Monitor is standard output device
+	The input function scanf() is again not a keyword but a function.
+	The output function predefined in C is printf(), it is not a keyword.
+	  printf() can either be used for printing simple text or for printing the value of a variable.
+	  getch() is a keyword which gets a character(we use for pausing the screen but its made for getting a char.), an output function.
+	  clrscr() is another keyword 
+	  gotoxy(num1, num2) can be used to place the cursor at the col "num1" and line "num2"
+	  1. Escape Sequences(special symbols)
+	    \n: insert new line
+		\t: insert a tab
+		\b: insert a backspace
+		\\: insert a backslash
+		\": insert a double quote
+		\r:insert a carriage return 
+		\f: insert a formfeed
+		\': insert a single quote 
+	  
+	  2. Format Specifiers(starts with a "%" sign):
+	    %d: int(decimall number system)
+		%f: float
+		%c: char 
+		%lf: double 
+
+LEC 5
+
+_____________________________________________________________________________________________________________________________________________________________________________
+Arithemetic Instruction:
+	
+	An instruction which is used to manipulate data using operators, is known as Arithemetic Instruction.
+
+OPERATORS
+
+Types of Operators:
+
+  1. Unary Operators: Operators which when used only needs one operand
+	+, -, ++, --, sizeof() 
+	  * note that here + and - are telling the sign as in +ve or -ve
+	  * ++ is an increment operator
+	    x++ is called post increament but ++x is called pre increament. Both does the same thong of x = x+1 but the post increament keeps the lowest priority despite being 
+		Unary(even less than the assignment operator) but pre increament keeps the highest poriority.
+	  
+	  * -- is a decreament operator
+	    x-- is is a post decreament operator and --x is pre decreament
+
+	  *sizeof(): this tells the size of different datatypes, variables and constants in bytes.
+	    the default size in bytes of various kinds is as follows:
+			1. float(3.5): 4bytes, less precise
+			2. double(3.56): 8bytes, more precise
+			3. char: 1byte, ASCII is used when determining the datatype of the character, as the binary of char, is still a num so sizeof('a') is 2bytes.
+			4. int: 2bytes
+			5. constant like 34: takes 2 bytes of memory
+			NOTE*: by default the size of char like "a" is that of an int as in binary form they 
+
+  2. Arithmetic Operators: 
+    */% then less prior is  +-
+	  by default if an operaton is being performed between any two integers, then the result is supposed to be an int too.
+	  if any of the two numbers or both the nums are a float, then the answer would be a double.(4.0 is also considered a float)
+
+  3. Bitwise Operators(works on binary nums.):
+      Types of bitwise operators:
+	    1. Bitwise AND & :
+		  -> 0 & 0 = 0
+		  -> 0 & 1 = 0
+		  -> 1 & 0 = 0
+		  -> 1 & 1 = 1
+
+		2. Bitwise OR | :
+		  -> 0 | 0 = 0
+		  -> 0 | 1 = 1
+		  -> 1 | 0 = 1
+		  -> 1 | 1 = 1
+
+		3. Bitwise XOR ^ :
+		  -> 0 ^ 0 = 0
+		  -> 0 ^ 1 = 1
+		  -> 1 ^ 0 = 1
+		  -> 1 ^ 1 = 0
+
+		4. Bitwise NOT ~ :
+		5. Right Shift >> :
+		  -> if we are given 53 >> 2, then the 16 character binary form, i.e., 0000 0000 0011 1000 becomes 0000 0000 0000 1110(2 zeroes are added to the left of the binary form.)
+
+		6. Left Shift << :
+		  ->if we have to do the right shifting, then the second num of times the binary form shifts to the left.
+
+  4. Relational Operators:
+    <, >, <=, >= and with less priority: ==, !=
+	Points to remember: 1. Relational operator always yields result either 0 or 1'
+	                    2. Every non-zero value is True or Zero is False
+						3. True is 1 and False is 0.
+
+  5. Logical Operators:(!, &&, ||)
+    NOT: is also a unary operator, Changes the truth value(False into True and True to False)
+	AND: is a binary operator
+
+
+								|Stat.1|Stat. 2| Result |
+								|True  | True  | True   |
+								|False |       | False  |
+								| True | False | False  |
+
+
+	OR: is again a binary operator
+
+
+								|Stat.1|Stat. 2| Result |
+								|False | False | False  |
+								|False | True  | True   |
+								|True  |       | False  |
+
+
+LECTURE 6
+
+_____________________________________________________________________________________________________________________________________________________________________________
+
+
+  DECISION CONTROL INSTRUCTION: We can skip some line using decision control.
+  NOTE*: a ';' is not used after the conditional statement as the condition would come to an end and the conditional block won't work.
+    if: If the condition within the if statement is true, it works. if(condition){}
+		if statement behaves like a single statement and multiple ifs behave as that many action statements.
+
+	if-else: if statement is mostly followed by an else statement which does not have any conditions in it.
+		combinely it behave as a single statement, as only one of the two is going to work.
+
+	Conditional Operator(?:):
+	also called as Ternary operator,i.e., it needs 3 operands to run 
+
+  6. Conditional Operators/ Terary operators:
+	They are written as :
+	 condition ? statement : statement;0.  
+	   take for eg, an if statement can also be written as a tenary operator if written as:
+	   	  x>0 ? printf("positive") : printf("non [positive");
+
+	SELECTIVE ASSIGNMENT:
+		if we have two variable and need to print only the greaterone, then we need to compare the two nums and then print out the greater one.
+		so we use selective assignment by:
+		see selective_operator.c
+  7. Assignment Operators
+  This is also the order in which all these operators are solved as BODMAS does not follow up in C Language.
+
