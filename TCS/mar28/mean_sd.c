@@ -13,6 +13,7 @@ int main()
 	scanf("&d", arr[i]);
 
 	for(i=0; i<n; i++)
+	sum=0.0;
 	sum+=arr[i];
 	mean=sum/n;
 
