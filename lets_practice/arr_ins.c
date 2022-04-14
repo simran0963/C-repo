@@ -2,7 +2,7 @@
 
 int main()
 {
-	int arr[100], i, j, n, num, x;
+	int arr[100], i, n, num, x;
 	printf("Enter the number of elements in the array: ");
 	scanf("%d",&n);
 	printf("Enter the value of elements: \n");
