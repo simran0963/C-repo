@@ -1,2 +1,1 @@
-sorted[o]=arr2[i];
-		// o++;
+printf("Enter the number of elements in the array: ");
