@@ -1,24 +1,28 @@
 #include<stdio.h>
+#include<math.h>
 
 int main()
 {
-	float num, temp2;
-	int temp, res, rem, i, arr[100],a;
-	printf("Enter the number to convert to its binary value: ");
-	scanf("%f",&num);
+	int num, rem, temp, res[100], i, a;
+	printf("Enter the number that has to be converted to its binary form: ");
+	scanf("%d",&num);
 	temp=num;
-	for(i=0;i!=0;i++)
+	for(i=0;temp!=1;i++)
 	{
 		a=0;
 		rem=temp%2;
-		temp=temp/2;
-		arr[i]=rem;
+		temp/=2;
+		res[i]=rem;
 		a++;
 	}
-	// temp2=num-temp;
-	for(i=a;i>=0;i--)
+	for(i=0;i<=a;i++)
 	{
-		printf("%d",arr[i]);
+		res[a]=1;
+		printf("%d ",res[i]);
 	}
-	// return 0;
+	for(i=a-1;i>=0;i--)
+	{
+		printf("%d  ",res[i]);
+	}
+	return 0;
 }

@@ -1,1 +1,4 @@
-printf("Enter the number of elements in the array: ");
+for(i=0;i<a;i++)
+	{
+		printf("%d ",res[i]);
+	}
