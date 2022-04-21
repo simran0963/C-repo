@@ -9,23 +9,22 @@ int main()
 	scanf("%d  %d",&o,&p);
 	if(n==o)
 	{
-		printf("Enter the elements of the first matrix: \n");
+		printf("\nEnter the elements of the first matrix: \n");
 		for(i=0;i<m;i++)
 		{
 			for(j=0;j<n;j++)
 			{
-				scanf("%d\t",&arr1[i][j]);
+				scanf("%d",&arr1[i][j]);
 			}
-			printf("\n");
 		}
+
 		printf("\nEnter the elements of the second matrix: \n");
 		for(i=0;i<n;i++)
 		{
 			for(j=0;j<p;j++)
 			{
-				scanf("%d\t",&arr1[n][p]);
+				scanf("%d",&arr2[i][j]);
 			}
-			printf("\n");
 		}
 		for(i=0;i<n;i++)
 		{
