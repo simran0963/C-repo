@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include<ctype.h>
 #define MAX 100
 int main()
 {
@@ -19,7 +20,7 @@ int main()
 			vowel[vo]=caps[i];
 			++vo;
 		}
-		else if(caps[i]==' ')
+		else if(caps[i]==' ' && caps[i-1]!=' ')
 		{
 			++sp;
 		}
