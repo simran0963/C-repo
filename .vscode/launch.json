@@ -7,13 +7,13 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "c:/Users/HP/OneDrive/Documents/REPOSITORIES/C-repo/lets_practice",
+      "cwd": "c:/Users/HP/OneDrive/Documents/REPOSITORIES/C-repo/lets_practice/String",
       "environment": [],
-      "program": "c:/Users/HP/OneDrive/Documents/REPOSITORIES/C-repo/lets_practice/build/Debug/outDebug",
+      "program": "c:/Users/HP/OneDrive/Documents/REPOSITORIES/C-repo/lets_practice/String/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
-      "externalConsole": false,
+      "console": "integratedTerminal",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
