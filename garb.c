@@ -12,47 +12,25 @@
 int main()
 {
 	char str[mac],str2[mac];
-	int n, i=0,ind, j,min=20,min_ind=0, k=0,max=0;
+	int n, i=0,max_ind, count, j,min=20,min_ind=0, k=0,max=0;
 	printf("Enter the string: ");
 	scanf("%[^\n]s",str);
-	while(str[i]!='\0')
+	for(i=0;str[i]!='\0' && str[i-1]==' ';i++)
 	{
-	    str2[i]=str[i];
-	    i++;
-	}
-	n=strlen(str);
-	while(str[i]!='\0' && str[i]!='#')
-	{
-		j=0;
-		while(str[j]!=' ')
+		for(j=i;str[j]!=' ' && str[j]!='\0';j++)
 		{
-			k++;
-			str[j]='#';
-			if(k>max)
-			{
-				max=k;
-				ind=j;
-			}
-			if(k<min && k!=0)
-			{
-				min=k;
-				min_ind=j;
-			}
-			j++;
+			count++;
 		}
-		i++;
-		k=0;
+		if(count>max)
+		{
+			max=count;
+			max_ind=j-max;
+		}
 	}
 	
-	printf("The maximum length word is: ");
-	for(i=ind-max;i<max;i++)
+	for(i=0;i!='\0';i++)
 	{
-		printf("%c",str2[i]);
+		printf("%c\t",str[i]);
 	}
-	printf("The minimum length word is: ");
-	for(i=min_ind-min;i<min;i++)
-	{
-		printf("%c",str2[i]);
-	}
-	return 0;
+	printf("\nThe max value is: ",max);
 }
