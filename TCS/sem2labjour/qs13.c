@@ -30,9 +30,19 @@ int main()
 	int vowel=0, cons=0;
 	while((ch = getc(fptr))!=EOF)
 	{
-		if(ch == '^'){
-			printf("\n\n");
+		if(ch != '^'){
+			printf("%c",ch);
+			if(ch>=65 && ch<=90 || ch>=97 && ch<=122){
+				if(ch=='A' || ch=='a'|| ch=='E'|| ch=='e'||ch=='I'||ch=='i'||ch=='o'||ch=='O'||ch=='U'||ch=='u')
+				{
+					vowel++;
+				}
+				else
+				cons++;
+			}
 		}
+		else
+			printf("\n\n");
 	}
 	printf("\nThe vowel count is: %d",vowel);
 	printf("\nThe consonant count is: %d",cons);
