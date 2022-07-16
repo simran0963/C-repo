@@ -1,5 +1,6 @@
-/* Read and print set of name, roll num, dob and date of admission of "n" students in the college where dob
-and date of admission consists of three members such as day, month and year as a separate structure */
+/*Name : Simran Mehta
+Section : R
+Roll Number : 65*/
 #include<stdio.h>
 struct students{
 	char name[30];
@@ -54,3 +55,25 @@ int main()
 	}
 	return 0;
 }
+/* Input: n=2
+   name[] = {"abc","xyz"}
+   rollnum[] = {01,02}
+   dob[] = {11,12}
+   mob[] = {"March","May"}
+   yob[] = {1999,1998}
+   doa[] = {1,2}
+   moa[] = {"April","May"}
+   yoa[] = {2018,2017}
+
+   Output: 
+		   student1
+		   Name : abc
+   		   Roll number : 01
+		   Dob : 11 March, 1999
+		   Doa : 1 April,2018
+		   student2
+		   Name : xyz
+   		   Roll number : 02
+		   Dob : 12 May, 1998
+		   Doa : 2 May,2017
+*/

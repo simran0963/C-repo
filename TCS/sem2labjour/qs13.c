@@ -1,51 +1,68 @@
-/* Create a file with 3 paragraphs. Display the contents and count the number of vowels and consonants in the 
-file .Display the count as standard output */
+/*Name : Simran Mehta
+Section : R
+Roll Number : 65*/
 #include<stdio.h>
+#include<stdlib.h>
+#include<ctype.h>
+struct paragraph
+{
+	char para[500];
+};
+void checker(FILE *ptr)
+{
+	char ch;
+	int vow=0, con=0;
+	while((ch=fgetc(ptr))!=EOF)
+	{
+		tolower(ch);
+		if(ch>='a' && ch<='z')
+		{
+			if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+			{
+				vow++;
+			}
+			else
+			con++;
+		}
+	}
+	printf("Number of vowels : %d\nNumber of consonants : %d",vow,con);
+}
+void print(FILE *ptr)
+{
+	char ch;
+	while((ch=fgetc(ptr)!=EOF))
+	{
+		printf("%c",ch);
+	}
+}
 int main()
 {
-	int cnt=0,i;
-	char str[1000];
-	FILE *fptr = fopen("file.txt", "w+");
-	printf("Enter the paragraphs, '^' should indicate the end of a paragraph\n"); 
-	while(str[i]!='\0')
+	struct paragraph pg[100];
+	FILE *ptr;
+	ptr = fopen("file.txt","w+");
+	if(ptr==NULL)
 	{
-		gets(str);
-		fprintf(fptr,"%s",str);
-		if(str[i]=='^')
-		{
-			cnt++;
-		}
-		
-		if(cnt==3)
-		{
-			break;
-		}
-
+		printf("Error opening file\n");
+		exit(0);
 	}
-	// while(!EOF)
-	// {
-	// 	fprintf(fptr,"%c",str);
-	// }
-	char ch;
-	int vowel=0, cons=0;
-	while((ch = getc(fptr))!=EOF)
+	int i;
+	for(i=0;i<3;i++)
 	{
-		if(ch != '^'){
-			printf("%c",ch);
-			if(ch>=65 && ch<=90 || ch>=97 && ch<=122){
-				if(ch=='A' || ch=='a'|| ch=='E'|| ch=='e'||ch=='I'||ch=='i'||ch=='o'||ch=='O'||ch=='U'||ch=='u')
-				{
-					vowel++;
-				}
-				else
-				cons++;
-			}
-		}
-		else
-			printf("\n\n");
+		gets(pg[i].para);
+		fflush(stdin);
+		fprintf(ptr,"%s\n",pg[i].para);
 	}
-	printf("\nThe vowel count is: %d",vowel);
-	printf("\nThe consonant count is: %d",cons);
-	fclose(fptr);
+	rewind(ptr);
+	printf("\nContent in file: \n");
+	rewind(ptr);
+	checker(ptr);
+	print(ptr);
+	fclose(ptr);
 	return 0;
 }
+/* Input: para 1 : qwertyuiop[]
+		  para 2 : asdfghjkl;'
+		  para 3 : zxcvbnm,./
+   Output: Vowels : 5
+		   Consonants : 21
+*/
