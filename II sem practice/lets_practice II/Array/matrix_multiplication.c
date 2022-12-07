@@ -30,6 +30,7 @@ int main()
 		{
 			for(j=0;j<n;j++)
 			{
+				res[i][j]=0;
 				for(k=0;k<n;k++)
 				{
 					res[i][j]+=arr1[i][k]*arr2[k][j];
